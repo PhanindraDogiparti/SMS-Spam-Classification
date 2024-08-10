@@ -20,7 +20,7 @@ Training the Model:
 
 The entire process of training the model is available in the SMS Spam Classification.ipynb notebook. Open it using Jupyter Notebook or Jupyter Lab and run the cells to see the process.
 
-#Workflow
+# Workflow
 1. Data Cleaning
 The dataset is first cleaned to remove any inconsistencies or irrelevant information. This includes:
 1) Removing duplicates
