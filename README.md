@@ -1,19 +1,17 @@
 # SMS Spam Classification
 
-Overview
+# Overview:
 This project aims to build a machine learning model to classify SMS messages as spam or not spam. The project involves several stages, including data cleaning, Exploratory Data Analysis (EDA), feature extraction using TF-IDF, model training, and evaluation. A Streamlit app is provided to interact with the model in a user-friendly way.
 
-Project Structure
+# Project Structure
 SMS Spam Classification.ipynb: A Jupyter Notebook that walks through the entire workflow, from data cleaning to model evaluation.
 app.py: The Streamlit app file that allows users to input SMS messages and receive predictions (spam or not spam).
 vectorizer.pkl: The saved TF-IDF vectorizer used to convert text data into numerical features.
 model.pkl: The trained Naive Bayes model used for classifying SMS messages.
 
-Running the Application
+# Running the Application
 Streamlit App:
-
 To run the Streamlit app, execute the following command in your terminal:
-bash
 Copy code
 streamlit run app.py
 This will start a local web server and open the app in your default web browser.
@@ -21,13 +19,13 @@ In the app, you can input an SMS message, and the model will predict whether it 
 Training the Model:
 
 The entire process of training the model is available in the SMS Spam Classification.ipynb notebook. Open it using Jupyter Notebook or Jupyter Lab and run the cells to see the process.
-Workflow
+
+#Workflow
 1. Data Cleaning
 The dataset is first cleaned to remove any inconsistencies or irrelevant information. This includes:
-
-Removing duplicates
-Handling missing values
-Normalizing text (e.g., converting to lowercase, removing punctuation)
+1) Removing duplicates
+2) Handling missing values
+3) Normalizing text (e.g., converting to lowercase, removing punctuation)
 2. Exploratory Data Analysis (EDA)
 EDA is performed to understand the underlying patterns and characteristics of the data. This includes:
 
@@ -52,5 +50,5 @@ The performance of the trained model is evaluated using a test dataset. Metrics 
 7. Saving the Model
 The trained model and vectorizer are saved as .pkl files for future use.
 
-Results
+# Results
 The project demonstrates strong performance in classifying SMS messages, with high accuracy and precision. Detailed performance metrics and visualizations are available in the notebook.
