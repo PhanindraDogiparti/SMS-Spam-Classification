@@ -1,94 +1,65 @@
 # SMS Spam Classification
 
-A machine learning project to classify SMS messages as **spam** or **not spam**, with an interactive Streamlit app for real-time predictions. The project covers data cleaning, Exploratory Data Analysis (EDA), feature extraction using TF-IDF, model training, and evaluation.
+## Overview  
+This project builds a machine learning model to classify SMS messages as either spam or not spam. The project pipeline includes data cleaning, Exploratory Data Analysis (EDA), feature extraction with TF-IDF, model training using Naive Bayes, and evaluation. A **Streamlit app** is provided to interact with the model easily.
 
----
-
-## 📂 Project Structure
-
-- **`SMS Spam Classification.ipynb`**: Jupyter Notebook containing the end-to-end workflow, from data preprocessing to model evaluation.
-- **`app.py`**: Streamlit app file for user interaction. Allows you to input an SMS message and get predictions in real time.
-- **`vectorizer.pkl`**: Saved TF-IDF vectorizer for converting text into numerical features.
-- **`model.pkl`**: Trained Naive Bayes model used for classifying SMS messages.
-
----
-
-## 🚀 Running the Application
-
-### Streamlit App
-Run the Streamlit app using the following command:
-
-```bash
-streamlit run app.py
+## Project Structure
+- **`SMS Spam Classification.ipynb`**: Jupyter Notebook that walks through the entire workflow, from data cleaning to model evaluation.  
+- **`app.py`**: Streamlit app that allows users to input SMS messages and receive predictions (spam or not spam).  
+- **`vectorizer.pkl`**: Saved TF-IDF vectorizer for converting text data into numerical features.  
+- **`model.pkl`**: Trained Naive Bayes model used to classify SMS messages.
 
 
-## Here is the updated README.md content with the additional section included in Markdown format:
 
-markdown
-Copy code
-# SMS Spam Classification
 
-A machine learning project to classify SMS messages as **spam** or **not spam**, with an interactive Streamlit app for real-time predictions. The project covers data cleaning, Exploratory Data Analysis (EDA), feature extraction using TF-IDF, model training, and evaluation.
 
----
+2. Training the Model
+The entire process of training the model is available in the SMS Spam Classification.ipynb notebook. Open it in Jupyter Notebook or Jupyter Lab and run the cells to see the process, which includes:
 
-## 📂 Project Structure
-
-- **`SMS Spam Classification.ipynb`**: Jupyter Notebook containing the end-to-end workflow, from data preprocessing to model evaluation.
-- **`app.py`**: Streamlit app file for user interaction. Allows you to input an SMS message and get predictions in real time.
-- **`vectorizer.pkl`**: Saved TF-IDF vectorizer for converting text into numerical features.
-- **`model.pkl`**: Trained Naive Bayes model used for classifying SMS messages.
-
----
-
-## 🚀 Running the Application
-
-### Streamlit App
-Run the Streamlit app using the following command:
-
-```bash
-streamlit run app.py
-This will launch a local web server and open the app in your default browser.
-In the app, input an SMS message, and the model will predict whether it is spam or not.
-🛠 Training the Model
-The model training process is outlined in the SMS Spam Classification.ipynb notebook. To retrain the model:
-
-Open the notebook in Jupyter Notebook or Jupyter Lab.
-Run the cells to follow the process step-by-step.
-📊 Workflow Overview
+Data cleaning and preprocessing
+Feature extraction with TF-IDF
+Model training and evaluation
+Workflow
 1. Data Cleaning
-The dataset is cleaned to prepare it for analysis and modeling:
+The dataset is cleaned by:
 
 Removing duplicates
 Handling missing values
-Normalizing text (e.g., converting to lowercase, removing punctuation)
+Normalizing text (e.g., converting to lowercase and removing punctuation)
 2. Exploratory Data Analysis (EDA)
-EDA provides insights into the dataset:
+EDA is conducted to gain insights into the data, including:
 
-Distribution of spam vs. non-spam messages
-Word frequency analysis
-Visualizations (e.g., bar charts, word clouds, histograms)
-3. Visualization
-Insights are visualized using:
+Analyzing the distribution of spam vs. non-spam messages
+Word frequency analysis for both categories
+Visualizing message lengths and other key features
+3. Feature Extraction
+Text features are extracted using the TF-IDF (Term Frequency-Inverse Document Frequency) method, converting text into numerical features that can be used by machine learning algorithms.
 
-Bar charts: Frequency of spam vs. non-spam messages
-Word clouds: Common words in spam and non-spam categories
-Histograms: Message length distribution
-4. Feature Extraction
-Text data is converted into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) method.
+4. Model Training
+The Naive Bayes algorithm is used to train the model on the processed data. Evaluation is done based on metrics such as accuracy, precision, recall, and F1-score.
 
-5. Model Training
-A Naive Bayes algorithm is trained on the processed data. Evaluation metrics include:
+5. Model Evaluation
+The trained model is evaluated using a test dataset. Key performance metrics (accuracy, precision, recall, F1-score) are calculated to assess its effectiveness.
 
-Accuracy
-Precision
-Recall
-F1-score
-6. Model Evaluation
-The trained model is tested on unseen data to assess its effectiveness. Metrics like accuracy and precision are calculated.
+6. Saving the Model
+The trained model and TF-IDF vectorizer are saved as .pkl files for future use and deployment.
 
-7. Saving the Model
-Both the trained model and the TF-IDF vectorizer are saved as .pkl files for future use.
+Results
+The model demonstrates strong performance in classifying SMS messages with high accuracy and precision. Detailed evaluation metrics and visualizations are included in the Jupyter Notebook.
 
-✅ Results
-The model achieves high accuracy and performs well in classifying SMS messages. Detailed performance metrics and visualizations are available in the notebook.
+## Requirements
+Python 3.x
+Streamlit
+scikit-learn
+pandas
+numpy
+matplotlib
+wordcloud (for visualization)
+
+
+## How to Run the Application
+### 1. **Streamlit App**  
+To run the app, execute the following command in your terminal:  
+```bash
+streamlit run app.py
+This will start a local web server and open the app in your browser. You can then input an SMS message, and the model will predict whether it is spam or not.
